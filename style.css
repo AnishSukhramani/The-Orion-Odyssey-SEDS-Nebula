@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;900&display=swap");
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    scroll-behavior: smooth;
+}
+body {
+    background: linear-gradient(#0f051e, #7597de,);
+    /* background: linear-gradient(#000, #3a3a3a); */
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+body{
+    height: 100vh;
+    background-color: #0f051e;
+    background-image: url('DIV3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+li{
+    list-style: none;
+}
+a.uni{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+a.uni:hover{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+
+}
+a:hover{
+    color: #ffffff;
+    text-shadow: #7597de;
+    text-decoration: underline;
+    /* background: #ffffff; */
+    /* border-radius: 20px; */
+    /* padding: 4%; */
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+.navbar .toggle_btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.action_btn{
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    border: solid;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+.action_btn:hover{
+    background-color: rgb(255, 255, 255);
+    /* scale: 1.05; */
+    color: rgb(0, 0, 0);
+}
+.action_btn:active{
+    scale: 0.95;
+}
+
+
+/* ============DropDown Menu============= */
+
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2em;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.dropdown_menu.open{
+    height: 240px;
+
+}
+
+
+/* ===========hero======================= */
+section#hero{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+#hero h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* =========responsive design============ */
+
+@media (max-width: 992px){
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media (max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+
+
+
+/* ======================================page 2=============== */
+
+/* Base styles */
+.pg2 {
+    position: relative;
+    padding: 60px; /* Adjust the padding to your preference */
+    /* height: 100vh; */
+    background: #0f051e;
+    /* background: linear-gradient(transparent,#0f051e); */
+    display: flex;
+    flex-wrap: wrap; /* Allow the flex items to wrap on smaller screens */
+    align-items: center; /* Center the items vertically */
+  }
+  
+  .img-container {
+    flex: 0 0 100%; /* Take full width on small screens, prevent shrinking */
+    text-align: center; /* Center the image horizontally */
+  }
+  
+  .sympo {
+    /* Make the image responsive, scales down on smaller screens */
+    /* max-width: 100%;  */
+     /* Maintain aspect ratio */
+    /* height: auto; */
+    margin-top: 2.5%;
+    max-height: 50vh;
+    max-width: 100%;
+    border-radius: 20px;
+    margin-bottom: 2.5%; /* Add some spacing between the image and text */
+  }
+  
+  .evetxt {
+    flex: 1; /* Allow the text to take the remaining width */
+    /* margin-left: 5%; */
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    /* margin-left: 10%; */
+    /* margin-right: 10%; */
+  }
+
+  .infobtn {
+    text-align: center;
+  }
+  .pg2 img:hover {
+    transform: translateY(-20px);
+    transition: transform 0.25s ease-in-out;
+    cursor: pointer;
+    width: auto;
+  }
+  .regbtn button:hover {
+    cursor: pointer;
+    background-image: url("BtnHover.png");
+    color: white;
+    border: white, solid;
+  }
+
+
+/* =====================================Page3======================================= */
+
+.page3 {
+    width: 100%;
+    /* height: 150vh; */
+    background: linear-gradient(to top, #0f051e, #7597de, #0f051e);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .page3 h2 {
+    font-size: 3.5em;
+    margin-bottom: 5%;
+    color: white;
+    padding-top: 0%;
+  }
+  .page3 h6 {
+    margin-top: 2%;
+    font-size: 3em;
+    /* margin-bottom: 10px; */
+    color: white;
+    /* padding-top: 3.5%; */
+  }
+  .page3 img {
+    width: 15%;
+    overflow: hidden;
+  }
+  .imglogo {
+    margin: auto;
+    display: flex;
+    border-radius: 50%;
+    position: relative;
+    width: 200px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .imglogo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s; /* Add a smooth transition effect */
+  }
+  
+  .imglogo:hover img {
+    transform: scale(1.2); /* Increase the scale on hover */
+    transform-origin: center; /* Zoom from the center */
+  }
+  
+  .page3 p {
+    /* width: 70%; */
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 2.5%;
+    color: white;
+    text-align: justify;
+  }
+  
+  #Nella {
+    margin-top: 5%;
+    width: 30%;
+    border-radius: 10px;
+  }
+  #Nella:hover {
+    translate: 0px, 5px, 0px;
+    cursor: pointer;
+    transform: translateY(-20px);
+    transition: transform 0.25s ease-in-out;
+  }
+  
+  .team img {
+    margin-top: 5%;
+    width: 18%;
+    border-radius: 10px;
+  }
+  .team img:hover {
+    translate: 0px, 5px, 0px;
+    cursor: pointer;
+    transform: translateY(-20px);
+    transition: transform 0.25s ease-in-out;
+  }
+  
+
+/* ========================================================== */
+
+.page4 {
+    /* height: 10vh; */
+    background: linear-gradient(to top, #0f051e, #7597de,#0f051e);
+    /* padding-top: 30%;
+    margin-top: 40%; */
+  }
+  
+  /* =======================================================contactpg============================== */
+  
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+  body {
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container {
+    max-width: 1170px;
+    margin: auto;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul {
+    list-style: none;
+  }
+  .footer {
+    background-color: #0f051e;
+    padding: 70px 0;
+  }
+  .footer-col {
+    width: 25%;
+    padding: 0 15px;
+  }
+  .footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #7597de;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #7597de;
+  }
+
+
+
+
+
+
+
+
+  
+  /* Additional styles for mobile devices */
+  @media screen and (max-width: 767px) {
+    .pg2 {
+      padding: 20px; /* Adjust the padding for mobile devices */
+    }
+  
+    .evetxt {
+      margin-left: 0; /* Remove the left margin on small screens */
+    }
+  
+    .pg2 h2 {
+      font-size: 2.5em; /* Decrease the font size for smaller screens */
+    }
+  }
+
+
+  @media (max-width: 574px) {
+    /* Adjust footer styles */
+    .footer-col {
+      width: 100%;
+    }
+  }
